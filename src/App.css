@@ -1,0 +1,162 @@
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+.photo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.photo-container:hover .overlay {
+  opacity: 1;
+}
+
+.linkedin-icon {
+  width: 50px;
+  height: 50px;
+  filter: invert(1); 
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.navigation a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navigation a:hover {
+  text-decoration: underline;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #2790f9;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #2980b9;
+}
+.social_icons{
+  position: fixed;
+  left: 0px;
+  top: 170px;
+}
+.list-unstyled{
+  list-style-type: none;
+  padding: 15px;
+}
+
+.wave_effect::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 25px;
+  height: 25px;
+  background: #00BCD4;
+  translate: -25% -25%;
+  border-radius: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  animation: ripple 3s infinite ease-out;
+  z-index: -1;
+}
+.wave_effect {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+    background-color: black;
+    background-size: cover;
+  }
+  .navigation {
+    display: none;
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  .navigation a {
+    padding: 10px 0;
+    font-size: 14px; 
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links.show {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url('https://e0.pxfuel.com/wallpapers/931/933/desktop-wallpaper-c-developer-developer-html-developer-and-web-developer-dark-developer-thumbnail.jpg') no-repeat center center;
+    background-size: cover;
+  }
+}
