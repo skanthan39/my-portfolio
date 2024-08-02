@@ -113,7 +113,7 @@ const TypingAnimation = () => {
           </ul>
         </div>
       </div>
-    </div>ddd
+    </div>
           
         </div>
     );
