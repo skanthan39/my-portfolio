@@ -1,0 +1,93 @@
+.scroll__content {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .sec_title {
+    border-bottom: 2px solid #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .sec_title h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .sec__content {
+    padding: 20px;
+  }
+  
+  .list-user-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+  }
+  
+  .list-user-details li {
+    margin-bottom: 10px;
+  }
+  
+  .list-title {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .value {
+    margin-left: 10px;
+  }
+  
+  .social-icons a {
+    color: #007bff;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  
+  .heading h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .subtitle svg {
+    margin-left: 10px;
+    fill: #007bff;
+  }
+  
+  .skills {
+    margin-top: 20px;
+  }
+  
+  .skill {
+    margin-bottom: 15px;
+  }
+  
+  .skill span {
+    display: inline-block;
+  }
+  
+  .percentage {
+    float: right;
+  }
+  
+  .progress_bg {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  
+  .progress_bar {
+    height: 10px;
+    background-color: #007bff;
+  }
+  
