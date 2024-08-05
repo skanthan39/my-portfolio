@@ -11,7 +11,7 @@ const Cv = () => {
     const [displayedText, setDisplayedText] = useState('');
     const [textIndex, setTextIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
-    const [isHome, updateisHome] = useState(false)
+    const [isHome, updateisHome] = useState(true)
 
     useEffect(() => {
         if (charIndex < texts[textIndex].length) {
@@ -29,6 +29,9 @@ const Cv = () => {
             return () => clearTimeout(timeout);
         }
     }, [charIndex, textIndex, texts]);
+    const setUpdateisHome = () => {
+      updateisHome(false);
+    };
 
     return (
         <div className="overAllContainer">
@@ -69,7 +72,7 @@ const Cv = () => {
                 </li> */}
                 <li className="menu-item">
                   <span>
-                    <a href="#about" data-hover="about">
+                    <a href="#about" onClick={setUpdateisHome}>
                       about
                     </a>
                   </span>
@@ -96,7 +99,7 @@ const Cv = () => {
                   </span>
                 </li>
 
-                <li>
+               {!isHome && <li>
                   <span className="home-item">
                     <a href="#home" data-hover="">
                       <svg
@@ -112,7 +115,7 @@ const Cv = () => {
                       </svg>
                     </a>
                   </span>
-                </li>
+                </li>}
 
               </ul>
             </div>
