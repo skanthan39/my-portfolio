@@ -2,6 +2,53 @@
     padding: 20px;
     background-color: #fff;
   }
+  .scrollable-content {
+    width: 300px;
+    height: 400px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    position: relative; /* Ensure the scrollbar is relative to this container */
+}
+
+/* WebKit browsers (Chrome, Safari) */
+.scrollable-content::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background of the scrollbar track */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}
+
+/* Firefox */
+.scrollable-content {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+}
+
+  .scroll__content {
+    position: absolute;
+    left: 66%;
+    top: 50%;
+    transform: translate(-50%, 100%);
+    animation: moveUp 0.6s forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translate(-50%, 100%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
   
   .sec_title {
     border-bottom: 2px solid #007bff;

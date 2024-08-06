@@ -202,6 +202,12 @@ input[type="submit"].btn, input[type="submit"], a.btn, button.btn, h3.subtitle, 
     border-color: #fff;
     transition: all 0.6s;
 } */
+ .icon-large{
+    height:100px !important;
+ }
+ .icon-large:hover{
+    color:#0040FF;
+ }
 .home-lines:after {
     content: "";
     position: absolute;

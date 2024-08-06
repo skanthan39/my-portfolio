@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './cv.css';
-import resume from './CV.pdf'
-import AboutMe from './About.js'
+import Resume from './resume/Resume.js'
+import resumePDF from './CV.pdf'
+import AboutMe from './about/About.js'
+import { TiHomeOutline } from "react-icons/ti";
+import Contact from './contact/Contact.js'
+import Project from './project/Project.js'
+
+
 
 const Cv = () => {
     const texts = [" Kanthan s ", " full Stack web developer"];
@@ -11,7 +17,8 @@ const Cv = () => {
     const [displayedText, setDisplayedText] = useState('');
     const [textIndex, setTextIndex] = useState(0);
     const [charIndex, setCharIndex] = useState(0);
-    const [isHome, updateisHome] = useState(true)
+    const [isHome, updateisHome] = useState({home:true,about:false,resume:false,project:false,contact:false});
+    
 
     useEffect(() => {
         if (charIndex < texts[textIndex].length) {
@@ -30,18 +37,35 @@ const Cv = () => {
         }
     }, [charIndex, textIndex, texts]);
     const setUpdateisHome = () => {
-      updateisHome(false);
+      let a = {home:false,about:true,resume:false,project:false,contact:false}
+      updateisHome(a);
     };
+    const gotoHome= () =>{
+      let a = {home:true,about:false,resume:false,project:false,contact:false}
+      updateisHome(a);
+    }
+    const openResume = () =>{
+      let a = {home:false,about:false,resume:true,project:false,contact:false}
+      updateisHome(a);
+    }
+    const openProject = () =>{
+      let a = {home:false,about:false,resume:false,project:true,contact:false}
+      updateisHome(a);
+    }
+    const openContact = () =>{
+      let a = {home:false,about:false,resume:false,project:false,contact:true}
+      updateisHome(a);
+    }
 
     return (
         <div className="overAllContainer">
-           { isHome && <div className="container name-container">
+           { isHome.home && <div className="container name-container">
                 <div className="overlay">
                     <div className='col content'>
                         <p className="typing">I'm<span className="typing-text">{displayedText}</span></p>
                         <div className='Under-score'></div>
                         <div className='row'>
-                            <a href={resume} download="Kanthan-CV.pdf">
+                            <a href={resumePDF} download="Kanthan-CV.pdf">
                                 <button className="download-cv-btn">Download CV</button>
                             </a>
                             <button className='contct-me-btn'>Contact Me</button>
@@ -53,7 +77,7 @@ const Cv = () => {
 
           {/* intro content   */}
 
-          <div className={`intro-content ${ !isHome ? 'move-to-left' : ''} `}>
+          <div className={`intro-content ${ !isHome.home ? 'move-to-left' : ''} `}>
             <div className="menu"> 
               <div className="linesContent">
                 <span className="home-line-top-left"></span>
@@ -79,28 +103,28 @@ const Cv = () => {
                 </li>
                 <li className="menu-item">
                   <span>
-                    <a href="#resume" data-hover="resume">
+                    <a href="#resume" onClick={openResume}>
                       resume
                     </a>
                   </span>
                 </li>
-                <li className="menu-item">
+                <li className="menu-item" >
                   <span>
-                    <a href="#other" data-hover="others">
+                    <a href="#other" onClick={openProject}>
                       Projects
                     </a>
                   </span>
                 </li>
                 <li className="menu-item">
                   <span>
-                    <a href="#contact" data-hover="contact">
+                    <a href="#contact" onClick={openContact}>
                       contact
                     </a>
                   </span>
                 </li>
 
-               {!isHome && <li>
-                  <span className="home-item">
+               {!isHome.home && <li>
+                  {/* <span className="home-item">
                     <a href="#home" data-hover="">
                       <svg
                         viewBox="0 0 64 64"
@@ -114,7 +138,8 @@ const Cv = () => {
                         ></path>
                       </svg>
                     </a>
-                  </span>
+                  </span> */} 
+                  <TiHomeOutline className="icon-large"  onClick={gotoHome} />
                 </li>}
 
               </ul>
@@ -123,7 +148,10 @@ const Cv = () => {
 
           {/* About page */}
           
-          {!isHome && <AboutMe />}
+          {isHome.about && !isHome.home && <AboutMe />}
+          {isHome.resume && !isHome.home && <Resume/>}
+          {isHome.project && !isHome.home && <Project/>}
+          {isHome.contact && !isHome.home && <Contact/>}
 
         </div>
     );
