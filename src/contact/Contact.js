@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="scroll__content">
       <div className="sec_title">
-        <h2>About Me</h2>
+        <h2>Contact Me</h2>
       </div>
       <div className="sec__content">
         <div className="container">
