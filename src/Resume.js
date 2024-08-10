@@ -150,6 +150,8 @@ const styles = {
     backgroundColor: 'transparent',
     color: 'azure',
     borderRadius: '15px',
+    height: '82vh',
+    overflow: 'auto',
   },
   header: {
     display: 'flex',

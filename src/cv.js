@@ -7,7 +7,7 @@ import { TiHomeOutline } from "react-icons/ti";
 import Contact from './contact/Contact.js'
 import Project from './project/Project.js'
 import { LuArrowBigRight } from "react-icons/lu";
-// import FullResume from "./Resume.js";
+import FullResume from "./Resume.js";
 
 
 
@@ -67,7 +67,7 @@ const Cv = () => {
     return (
         <div className="overAllContainer">
            { isHome.home && <div className="container name-container">
-                <div className="overlay">
+                <div className="overlay-1">
                     <div className='col content'>
                         <p className="typing">I'm<span className="typing-text">{displayedText}</span></p>
                         <div className='Under-score'></div>
@@ -134,7 +134,7 @@ const Cv = () => {
                       <span className="tooltip-text">Go to Home</span>
                     </div>
                 </li>
-                 {/* <li>
+                 <li>
                  <div className="icon-container">
                      <LuArrowBigRight
                        className="icon-large"
@@ -143,7 +143,7 @@ const Cv = () => {
                      />
                      <span className="tooltip-text">View Full CV</span>
                    </div>
-               </li>   */}
+               </li>  
                 </>
                )
                
@@ -160,7 +160,7 @@ const Cv = () => {
           {isHome.resume && !isHome.home && <Resume/>}
           {isHome.project && !isHome.home && <Project/>}
           {isHome.contact && !isHome.home && <Contact/>}
-          {/* {isHome.fullResume && !isHome.home && <FullResume/>} */}
+          {isHome.fullResume && !isHome.home && <FullResume/>}
 
         </div>
     );

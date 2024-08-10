@@ -163,4 +163,16 @@
     right: 9%;
     top: 1%;
   }
+  .navigation {
+    display:none;
+  }
+}
+@media (max-width: 768px){
+  .navigation {
+    display:block;
+  }
+  .full-resume {
+    background: #1a1a1a !important;
+  }
+
 }
