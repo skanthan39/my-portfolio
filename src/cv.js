@@ -6,6 +6,9 @@ import AboutMe from './about/About.js'
 import { TiHomeOutline } from "react-icons/ti";
 import Contact from './contact/Contact.js'
 import Project from './project/Project.js'
+import { LuArrowBigRight } from "react-icons/lu";
+// import FullResume from "./Resume.js";
+
 
 
 
@@ -37,23 +40,27 @@ const Cv = () => {
         }
     }, [charIndex, textIndex, texts]);
     const setUpdateisHome = () => {
-      let a = {home:false,about:true,resume:false,project:false,contact:false}
+      let a = {home:false,about:true,resume:false,project:false,contact:false,fullResume:false}
       updateisHome(a);
     };
     const gotoHome= () =>{
-      let a = {home:true,about:false,resume:false,project:false,contact:false}
+      let a = {home:true,about:false,resume:false,project:false,contact:false,fullResume:false}
       updateisHome(a);
     }
     const openResume = () =>{
-      let a = {home:false,about:false,resume:true,project:false,contact:false}
+      let a = {home:false,about:false,resume:true,project:false,contact:false,fullResume:false}
       updateisHome(a);
     }
     const openProject = () =>{
-      let a = {home:false,about:false,resume:false,project:true,contact:false}
+      let a = {home:false,about:false,resume:false,project:true,contact:false,fullResume:false}
       updateisHome(a);
     }
     const openContact = () =>{
-      let a = {home:false,about:false,resume:false,project:false,contact:true}
+      let a = {home:false,about:false,resume:false,project:false,contact:true,fullResume:false}
+      updateisHome(a);
+    }
+    const openCV = () =>{
+      let a = {home:false,about:false,resume:false,project:false,contact:false,fullResume:true}
       updateisHome(a);
     }
 
@@ -68,7 +75,7 @@ const Cv = () => {
                             <a href={resumePDF} download="Kanthan-CV.pdf">
                                 <button className="download-cv-btn">Download CV</button>
                             </a>
-                            <button className='contct-me-btn'>Contact Me</button>
+                            <button className='contct-me-btn' onClick={openContact}>Contact Me</button>
                         </div>
                     </div>
                 </div>
@@ -78,22 +85,14 @@ const Cv = () => {
           {/* intro content   */}
 
           <div className={`intro-content ${ !isHome.home ? 'move-to-left' : ''} `}>
-            <div className="menu"> 
+            <div className={`menu ${ !isHome.home ? "menu-not-home" : ''  }`}> 
               <div className="linesContent">
                 <span className="home-line-top-left"></span>
                 <span className="home-line-top-right"></span>
                 <span className="home-line-bottom-left"></span>
                 <span className="home-line-bottom-right"></span>
             </div>
-              <ul id="menu" className="list-unstyled menu_list">
-                
-                {/* <li className="menu-item">
-                  <span>
-                    <a href="#home" className="hide" data-hover="home">
-                      home
-                    </a>
-                  </span>
-                </li> */}
+              <ul id="menu" className={`list-unstyled menu_list ${ !isHome.home ? "menu-list-not-home" : ''  }`}>
                 <li className="menu-item">
                   <span>
                     <a href="#about" onClick={setUpdateisHome}>
@@ -123,24 +122,33 @@ const Cv = () => {
                   </span>
                 </li>
 
-               {!isHome.home && <li>
-                  {/* <span className="home-item">
-                    <a href="#home" data-hover="">
-                      <svg
-                        viewBox="0 0 64 64"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                      >
-                        <path
-                          id="arrow-right-2"
-                          d="M37.333 10.667q1.125 0 1.896 0.771l18.667 18.667q0.771 0.771 0.771 1.896t-0.771 1.896l-18.667 18.667q-0.771 0.771-1.896 0.771-1.146 0-1.906-0.76t-0.76-1.906q0-1.125 0.771-1.896l14.125-14.104h-41.563q-1.104 0-1.885-0.781t-0.781-1.885 0.781-1.885 1.885-0.781h41.563l-14.125-14.104q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </span> */} 
-                  <TiHomeOutline className="icon-large"  onClick={gotoHome} />
-                </li>}
+               {!isHome.home && (
+                <>
+                  <li>
+                   <div className="icon-container">
+                      <TiHomeOutline
+                        className="icon-large"
+                        size={25}
+                        onClick={gotoHome}
+                      />
+                      <span className="tooltip-text">Go to Home</span>
+                    </div>
+                </li>
+                 {/* <li>
+                 <div className="icon-container">
+                     <LuArrowBigRight
+                       className="icon-large"
+                       size={25}
+                       onClick={openCV}
+                     />
+                     <span className="tooltip-text">View Full CV</span>
+                   </div>
+               </li>   */}
+                </>
+               )
+               
+                             
+                }
 
               </ul>
             </div>
@@ -152,6 +160,7 @@ const Cv = () => {
           {isHome.resume && !isHome.home && <Resume/>}
           {isHome.project && !isHome.home && <Project/>}
           {isHome.contact && !isHome.home && <Contact/>}
+          {/* {isHome.fullResume && !isHome.home && <FullResume/>} */}
 
         </div>
     );

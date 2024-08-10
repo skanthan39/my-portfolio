@@ -40,6 +40,17 @@
     transform: translate(-50%, 100%);
     animation: moveUp 0.6s forwards;
 }
+.underlineWidth{
+  width: 70px;
+  margin-top: 5px;
+}
+.underline-color{
+  fill: none;
+  transform: translate(-147px, -464px);
+}
+.underline{
+  stroke: #0040FF;
+}
 
 @keyframes moveUp {
     0% {
@@ -102,11 +113,12 @@
     font-weight: bold;
     margin-top: 40px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
   }
   
   .subtitle svg {
-    margin-left: 10px;
+    margin-left: 0px;
     fill: #007bff;
   }
   

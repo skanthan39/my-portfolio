@@ -124,7 +124,7 @@
 
 
 @media (max-width: 768px) {
-  body {
+  .full-resume {
     background-color: black;
     background-size: cover;
   }
@@ -155,8 +155,12 @@
 }
 
 @media (min-width: 768px) {
-  body {
+  .full-resume {
     background: url('https://e0.pxfuel.com/wallpapers/931/933/desktop-wallpaper-c-developer-developer-html-developer-and-web-developer-dark-developer-thumbnail.jpg') no-repeat center center;
     background-size: cover;
+    /* width:100%; */
+    position: fixed;
+    right: 9%;
+    top: 1%;
   }
 }
