@@ -71,7 +71,7 @@ const Project = () => {
           <div className="resume project"> 
             <ul>
               <li>
-                <b>Language:</b> Vue.js
+                <b>Language:</b> Vue.js,React.js
               </li>
               <li>
                 <b>Duration:</b> 5 months
