@@ -76,9 +76,9 @@ const AboutMe = () => {
                 </div>
                 <div className="skill">
                   <span>Node JS</span>
-                  <span className="percentage">80%</span>
+                  <span className="percentage">60%</span>
                   <div className="progress_bg">
-                    <div className="progress_bar" style={{ width: '80%' }}></div>
+                    <div className="progress_bar" style={{ width: '60%' }}></div>
                   </div>
                 </div>
                 <div className="skill">
@@ -90,16 +90,16 @@ const AboutMe = () => {
                 </div>
                 <div className="skill">
                   <span>My SQL</span>
-                  <span className="percentage">80%</span>
+                  <span className="percentage">60%</span>
                   <div className="progress_bg">
-                    <div className="progress_bar" style={{ width: '80%' }}></div>
+                    <div className="progress_bar" style={{ width: '60%' }}></div>
                   </div>
                 </div>
                 <div className="skill">
                   <span>Express JS</span>
-                  <span className="percentage">60%</span>
+                  <span className="percentage">40%</span>
                   <div className="progress_bg">
-                    <div className="progress_bar" style={{ width: '60%' }}></div>
+                    <div className="progress_bar" style={{ width: '40%' }}></div>
                   </div>
                 </div>
                 <div className="skill">

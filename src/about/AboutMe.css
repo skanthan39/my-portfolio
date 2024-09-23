@@ -75,6 +75,8 @@
   
   .sec__content {
     padding: 20px;
+    height: 75%;
+    overflow: auto;
   }
   
   .list-user-details {

@@ -10,7 +10,10 @@
     margin-left: 10px;
     fill: #007bff;
   }
-  
+  .education-content {
+    height: 74vh;
+    overflow: auto;
+  }
   .resume .education-content {
     margin-bottom: 1.5rem;
   }
