@@ -98,3 +98,101 @@
 .college-location{
   padding-top: 25px;
 }
+
+/* Default desktop/tablet styles (above 765px) */
+/* (This will be your existing CSS as is) */
+
+/* Mobile view adjustments for screens below 765px */
+@media only screen and (max-width: 765px) {
+
+  /* Adjust the container width to full-width for mobile */
+  .sec__content-resume {
+    width: 100%;
+    padding: 15px;
+    height: auto;
+  }
+
+  /* Align title in center and adjust margins */
+  .sec_title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  /* Adjust layout for mobile */
+  .container, .container-1 {
+    display: block;
+    width: 100%;
+  }
+
+  /* Make rows stack vertically instead of side-by-side */
+  .row {
+    display: block;
+  }
+
+  .col-sm-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust subtitle size */
+  .subtitle {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  /* Remove extra padding for mobile view */
+  .resume .item {
+    margin-bottom: 15px;
+  }
+
+  /* Adjust the font sizes for mobile */
+  .resume .content h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Reduce padding for mobile view */
+  .resume .date {
+    padding: 0.3rem;
+  }
+
+  /* Experience section margin adjustment for mobile */
+  .resume-exprince {
+    margin-top: 30px;
+    position: relative;
+    left: 0;
+  }
+
+  /* Additional styles for small screen readability */
+  .college-name, .college-location {
+    font-size: 0.95rem;
+  }
+
+  /* Ensure the SVG underline scales properly */
+  .subtitle svg {
+    width: 50px;
+    height: 5px;
+  }
+
+  /* Adjusting overflow to avoid scrolling issues on small screens */
+  .sec__content-resume {
+    height: auto; /* Remove fixed height for mobile */
+    overflow-y: visible;
+    left: 53%;
+  }
+  .qualification-content{
+    overflow: auto;
+    height: 83vh;
+  }
+  .form-container {
+    flex: 1 1;
+    padding: 9px;
+    background-color: white;
+    /* min-width: 258px;
+    max-width: 30%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+}

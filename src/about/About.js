@@ -46,7 +46,7 @@ const AboutMe = () => {
             </div>
             <div className="col-xs-6 col-sm-8">
               <div className="heading">
-                <h2>Kanthan S <br />Full Stack Web Developer</h2>
+                <h2>Kanthan S <br />Full Stack Developer</h2>
               </div>
             </div>
           </div>

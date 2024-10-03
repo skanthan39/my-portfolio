@@ -46,3 +46,9 @@
   .project{
     color: #9b9b9b;
   }
+  @media (max-width: 768px) {
+    .sec__content-projects {
+      top: 52%;
+      height: 111vh;
+    }
+  }

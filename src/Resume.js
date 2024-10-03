@@ -104,7 +104,7 @@ const FullResume = () => {
             <li>Tamil (Native)</li>
           </ul>
         </section>
-        <div className="social_icons">
+        {/* <div className="social_icons">
       <ul className="list-unstyled ps-1">
         <li className="wave_effect"><a href="https://web.whatsapp.com/send?phone=+918778331122" target="_blank"><img className="img-fluid" src="https://firebee.sgp1.digitaloceanspaces.com/firebee_laravel10/social_icon/whatsapp_01.png" alt="Whatsapp" /></a></li>
         <li className="wave_effect"><a href="https://join.skype.com" target="_blank"><img className="img-fluid" src="https://firebee.sgp1.digitaloceanspaces.com/firebee_laravel10/social_icon/skype.png" alt="Skype" /></a></li>
@@ -132,7 +132,7 @@ const FullResume = () => {
             <a href="#internship" onClick={toggleMenu}>Internship</a>
             <a href="#languages" onClick={toggleMenu}>Languages</a>
           </div>
-        </nav>
+        </nav> */}
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import './Project.css';
 import { FaGithub } from "react-icons/fa";
@@ -6,7 +5,7 @@ import { TbWorld } from "react-icons/tb";
 
 const Project = () => {
   return (
-    <div className="col-xs-12 col-sm-12 sec__content-resume">
+    <div className="col-xs-12 col-sm-12 sec__content-resume sec__content-projects">
        <div className="sec_title">
         <h2>Projects</h2>
       </div>

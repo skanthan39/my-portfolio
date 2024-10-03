@@ -2,9 +2,9 @@
   padding: 20px;
 }
 
-.sec_title h2 {
+/* .sec_title h2 {
   margin-bottom: 20px;
-}
+} */
 
 .contact-info {
   display: flex;
@@ -87,4 +87,30 @@ a#thecontactemail {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+}
+.thanks-for-contact-img{
+  /* padding: 45px 0px;
+  width: 100%; */
+  height:350px;
+}
+.spinner-border{
+  position: absolute;
+  top:50%;
+  right: 50%;
+}
+.contact-disable{
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+
+@media only screen and (max-width: 765px) {
+
+.contact-details{
+  display: flex;
+  flex-direction: column;
+}
+.contact{
+  top: 53%;
+}
 }

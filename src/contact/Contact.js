@@ -3,6 +3,8 @@ import './Contact.css';
 import phone from "../images/customer-service.gif";
 import location from "../images/location.gif";
 import email from "../images/dove.gif";
+import thanksForContactUS from '../images/thanks-for-contact.jpg'
+
 
 const Contact = () => {
   // Corrected state initialization as an object
@@ -12,11 +14,13 @@ const Contact = () => {
     contactNumber: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false); 
+  const [isContact,setContact] = useState(false);
 
   // Function to handle form submission
   const sendDetailsToMail = async (e) => {
     e.preventDefault();
-  
+    setLoading(true);
     // Define the payload from the form state
     const payload = {
       name: formArray.name,
@@ -36,7 +40,8 @@ const Contact = () => {
   
       if (response.ok) {
         const data = await response.json();
-        alert('Message sent successfully!');
+        // alert('Message sent successfully!');
+        setContact(true);
         console.log('Response:', data);
         // You can reset the form or handle a success state here
       } else {
@@ -46,6 +51,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error sending message:', error);
       console.log('An error occurred. Please try again.');
+    }finally{
+      setLoading(false);
     }
   };
   
@@ -68,7 +75,11 @@ const Contact = () => {
         <div className="row">
           <div className="contact-info text-center">
             <div>
-              <div className="form-container">
+            {!isContact ? (<>
+              { loading && (<div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+              </div> ) }
+              <div className={`${loading ? 'contact-disable':''} form-container `}>
                 <h4>Contact Us</h4>
                 <form onSubmit={sendDetailsToMail}>
                   <div className="form-group">
@@ -110,9 +121,9 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  <button type="submit" className="btn-submit">Submit Now</button>
+                  <button type="submit" disabled={loading} className="btn-submit">Submit Now</button>
                 </form>
-              </div>
+              </div>       </>) :  <img src={thanksForContactUS} alt="Thanks for contact uS" className="thanks-for-contact-img"/> }
 
               <div className="col">
                 <div className="contact-details">
