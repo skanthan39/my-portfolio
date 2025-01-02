@@ -106,7 +106,7 @@ const Project = () => {
             <li>
               <div className='project-link'>
                 <b>
-                  <TbWorld /></b><a href="https://sabaricommunications.rf.gd/" target='_blank'>Sabari Communications (Testing website)
+                  <TbWorld /></b><a href="https://sabaricommunications.com/" target='_blank'>Sabari Communications (Testing website)
                 </a>
               </div>
               </li>
