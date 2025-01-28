@@ -40,13 +40,13 @@ const Project = () => {
               <li>
                 Enabled non-technical users to create styled HTML pages without coding knowledge.
               </li>
-              <li>
+              {/* <li>
                 <div className='project-link'>
                   <b>
                     <FaGithub />
                   </b><a href="https://github.com/skanthan39/HTML-Builder" target='_blank'>html builder Git</a>
                 </div>
-              </li>
+              </li> */}
               <li>
               <div className='project-link'>
                 <b>
@@ -101,12 +101,11 @@ const Project = () => {
             <li><b>Duration:</b> 1 month</li>
             <li><b>Team Members:</b> 1 (solo project)</li>
             <li><b>Type:</b> Freelance project</li>
-            <li><b>Description:</b> Developing a simple website for Sabari Communications organization</li>
-            <li><b>Status:</b> Not yet completed (in progress)</li>
+            <li><b>Description:</b> Developing a simple website for Sabari Communications organization.</li>
             <li>
               <div className='project-link'>
                 <b>
-                  <TbWorld /></b><a href="https://sabaricommunications.com/" target='_blank'>Sabari Communications (Testing website)
+                  <TbWorld /></b><a href="https://sabaricommunications.com/" target='_blank'>Sabari Communications 
                 </a>
               </div>
               </li>

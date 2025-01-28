@@ -82,10 +82,19 @@ const Resume = () => {
               <div className="resume">
                 <div className="item">
                   <div className="date">
-                    <span>May 2023 - Till Date</span>
+                    <span>May 2023 - Nov 2024</span>
                   </div>
                   <div className="content">
                     <h4>Ezofis</h4>
+                    <h5>Web Developer</h5>
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="date">
+                    <span>Nov 2024 - Till now</span>
+                  </div>
+                  <div className="content">
+                    <h4>Hero Apps</h4>
                     <h5>Web Developer</h5>
                   </div>
                 </div>
