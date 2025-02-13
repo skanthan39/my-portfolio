@@ -259,6 +259,11 @@ input[type="submit"].btn, input[type="submit"], a.btn, button.btn, h3.subtitle, 
     visibility: visible;
     opacity: 1;
   }
+
+  .selectedItem-home{
+    -webkit-text-stroke: 2px #0042fe !important;
+    color: #0042fe !important;
+  }
   
 @media (min-width: 1200px) {
     .home-lines {

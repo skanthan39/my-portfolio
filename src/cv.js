@@ -82,27 +82,31 @@ const Cv = () => {
                             <span className="home-line-bottom-right"></span>
                         </div>
                     ) : (
-                        <div className="hamburger-icon" onClick={toggleMenu}>
-                            {[...Array(3)].map((_, i) => (
-                                <div key={i} className={`line ${isHome.home || isHome.fullResume ?  "" : "dark" }`}></div>
-                            ))}
-                            
-                        </div>
+                        <>
+                            <img src="" alt="logo" />
+                            <div className="hamburger-icon" onClick={toggleMenu}>
+                                {[...Array(3)].map((_, i) => (
+                                    <div key={i} className={`line ${isHome.home || isHome.fullResume ?  "" : "dark" }`}></div>
+                                ))}
+                                
+                            </div>
+                        </>
+                       
                     )}
 
                     {(!isSmallScreen || showScreen) && (
                         <ul id="menu" className={`list-unstyled menu_list ${!isHome.home ? "menu-list-not-home" : ''}`}>
                             <li className="menu-item">
-                                <span><a href="#about" onClick={() => updateSection('about')}>About</a></span>
+                                <span><a href="#about" className={` ${isHome.about ? "selectedItem-home" : 'noclass'}`} onClick={() => updateSection('about')}>About</a></span>
                             </li>
                             <li className="menu-item">
-                                <span><a href="#resume" onClick={() => updateSection('resume')}>Qualifications</a></span>
+                                <span><a href="#resume" className={` ${isHome.resume ? "selectedItem-home" : ''}`} onClick={() => updateSection('resume')}>Qualifications</a></span>
                             </li>
                             <li className="menu-item">
-                                <span><a href="#other" onClick={() => updateSection('project')}>Projects</a></span>
+                                <span><a href="#other" className={` ${isHome.project ? "selectedItem-home" : ''}`} onClick={() => updateSection('project')}>Projects</a></span>
                             </li>
                             <li className="menu-item">
-                                <span><a href="#contact" onClick={() => updateSection('contact')}>Contact</a></span>
+                                <span><a href="#contact" className={` ${isHome.contact ? "selectedItem-home" : ''}`} onClick={() => updateSection('contact')}>Contact</a></span>
                             </li>
 
                             {!isHome.home && (
@@ -127,7 +131,7 @@ const Cv = () => {
                                             <span className="tooltip-text">View CV</span>
                                         </>
                                     ) : (
-                                        <span><a href="#contact" onClick={() => updateSection('fullResume')}>View CV</a></span>
+                                        <span><a href="#contact" className={` ${isHome.fullResume ? "selectedItem-home" : ''}`} onClick={() => updateSection('fullResume')}>View CV</a></span>
                                     )}
                                 </div>
                             </li>
