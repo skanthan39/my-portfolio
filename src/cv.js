@@ -9,6 +9,7 @@ import Project from './project/Project.js';
 import { LuArrowBigRight } from "react-icons/lu";
 import FullResume from "./Resume.js";
 import { useMediaQuery } from '@mui/material';
+import sklogo from './images/sklogo.png'
 
 const Cv = () => {
     const texts = [" Kanthan S ", " Full Stack Developer"];
@@ -82,12 +83,17 @@ const Cv = () => {
                             <span className="home-line-bottom-right"></span>
                         </div>
                     ) : (
-                        <div className="hamburger-icon" onClick={toggleMenu}>
-                            {[...Array(3)].map((_, i) => (
-                                <div key={i} className={`line ${isHome.home || isHome.fullResume ?  "" : "dark" }`}></div>
-                            ))}
-                            
-                        </div>
+
+                        <>
+                            <img className="sk-logo" src={sklogo} alt="logo" />
+                            <div className="hamburger-icon" onClick={toggleMenu}>
+                                {[...Array(3)].map((_, i) => (
+                                    <div key={i} className={`line ${isHome.home || isHome.fullResume ?  "" : "dark" }`}></div>
+                                ))}
+                                
+                            </div>
+                        </>
+                        
                     )}
 
                     {(!isSmallScreen || showScreen) && (

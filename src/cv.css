@@ -559,6 +559,12 @@ ul, ol {
     background: #0000;
     border: 2px solid #fff;
 }
+.sk-logo{
+    width: 55px;
+    position: absolute;
+    top: -8px;
+    left: 1px;
+}
 
 /* For screens smaller than 768px */
 @media (max-width: 768px) {

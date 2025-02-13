@@ -1,7 +1,7 @@
 .sec__content-resume {
   position: absolute;
   left: 66%;
-  top: 50%;
+  top: 48%;
   transform: translate(-50%, 100%);
   animation: moveUp 0.6s forwards;
   padding: 20px;
@@ -109,7 +109,8 @@
   .sec__content-resume {
     width: 100%;
     padding: 15px;
-    height: auto;
+    /* height: auto; */
+    height: 106vh;
   }
 
   /* Align title in center and adjust margins */
@@ -175,7 +176,7 @@
 
   /* Adjusting overflow to avoid scrolling issues on small screens */
   .sec__content-resume {
-    height: auto; /* Remove fixed height for mobile */
+    /* height: auto; Remove fixed height for mobile */
     overflow-y: visible;
     left: 53%;
   }
