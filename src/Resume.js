@@ -147,7 +147,7 @@ const styles = {
     margin: '15px auto',
     maxWidth: '800px',
     padding: '20px',
-    backgroundColor: 'transparent',
+    backgroundColor: '#000000',
     color: 'azure',
     borderRadius: '15px',
     height: '82vh',
